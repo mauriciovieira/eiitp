@@ -1,0 +1,8 @@
+---
+- hosts: all
+
+# Dev environment
+- include: playbooks/env.yaml
+
+# Projects
+- include: playbooks/apinf.yaml

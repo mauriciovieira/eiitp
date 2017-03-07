@@ -3,3 +3,4 @@ ei:
 
 ou:
 	@echo "Lelelele ooooou"
+	ansible-playbook start.yaml
