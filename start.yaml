@@ -2,7 +2,8 @@
 - hosts: all
 
 # Dev environment
-- include: playbooks/env.yaml
+- include: playbooks/desktop.yaml
+- include: playbooks/terminal.yaml
 
 # Projects
 #- include: playbooks/apinf.yaml
