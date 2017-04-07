@@ -13,6 +13,7 @@
     cask_packages:
       - screenhero
       - shiftit
+      - bitcoin-core
 
   tasks:
     - name: Add Homebrew taps
