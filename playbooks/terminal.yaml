@@ -8,6 +8,7 @@
 
     packages:
       - ag
+      - ghc
       - git
 
     rubygems:
