@@ -7,9 +7,9 @@
       - macvim
 
     cask_packages:
+      - electrum
       - screenhero
       - shiftit
-      - bitcoin-core
 
   tasks:
     - name: Install Homebrew packages
