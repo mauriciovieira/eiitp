@@ -3,10 +3,6 @@
   hosts: all
 
   vars:
-    taps:
-      - caskroom/versions
-      - homebrew/versions
-
     packages:
       - macvim
 
@@ -16,10 +12,6 @@
       - bitcoin-core
 
   tasks:
-    - name: Add Homebrew taps
-      homebrew_tap: name={{ item }} state=present
-      with_items: "{{ taps }}"
-
     - name: Install Homebrew packages
       homebrew: name={{ item }} state=latest
       with_items: "{{ packages }}"

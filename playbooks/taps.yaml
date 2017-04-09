@@ -1,0 +1,13 @@
+---
+- name: Setup homebrew taps
+  hosts: all
+
+  vars:
+    taps:
+      - caskroom/versions
+      - homebrew/versions
+
+  tasks:
+    - name: Add Homebrew taps
+      homebrew_tap: name={{ item }} state=present
+      with_items: "{{ taps }}"
