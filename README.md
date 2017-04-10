@@ -1,4 +1,5 @@
-# simbora
+# everybody is in the place 
+
 Quickly setup/fix my environment.
 
 ## Requirements
@@ -12,11 +13,11 @@ Install [Homebrew](http://brew.sh)
 ## Execution
 
 ```
-alias simbora=make
-simbora ei
-simbora ou
+alias eiitp=make
+eiitp lets
+eiitp go
 ```
 
 ## Inspiration
 
-[Simbora ei!](https://youtu.be/FeWyXxM2u1U?t=19s)
+[Everybody in the place](https://www.youtube.com/watch?v=WY87o9IZXWg)
