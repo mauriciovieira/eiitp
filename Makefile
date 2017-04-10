@@ -1,6 +1,7 @@
-ei:
+lets:
+	@echo 'Is ansible in the place?'
 	which ansible || brew install ansible
 
-ou:
-	@echo "Lelelele ooooou"
+go:
+	@echo 'Let's go!'
 	ansible-playbook start.yaml
