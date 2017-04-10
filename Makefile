@@ -3,5 +3,5 @@ lets:
 	which ansible || brew install ansible
 
 go:
-	@echo 'Let's go!'
+	@echo "Let's go!"
 	ansible-playbook start.yaml
