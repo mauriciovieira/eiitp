@@ -11,6 +11,7 @@
       - firefox
       - screenhero
       - shiftit
+      - visual-studio-code
 
   tasks:
     - name: Install Homebrew packages
