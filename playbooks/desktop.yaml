@@ -8,6 +8,7 @@
 
     cask_packages:
       - electrum
+      - firefox
       - screenhero
       - shiftit
 
