@@ -5,7 +5,9 @@
   vars:
     packages:
       - ag
+      - ffmpeg
       - ghc
+      - gifsicle
       - git
       - passpie
       - yarn
