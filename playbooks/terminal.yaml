@@ -9,11 +9,25 @@
       - ghc
       - gifsicle
       - git
+      - heroku
+      - imagemagick
       - passpie
       - yarn
+      - wget
 
     rubygems:
       - travis
+
+    todo:
+      - rvm
+      - nvm
+      - yadr
+
+    db:
+      - mysql
+      - postgresql
+      - redis
+      - mongodb
 
   tasks:
     - name: Install Homebrew packages
