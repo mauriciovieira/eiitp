@@ -14,20 +14,23 @@
       - passpie
       - yarn
       - wget
+      - pyenv
+      - pyenv-virtualenv
+      - pyenv-virtualenvwrapper
 
     rubygems:
       - travis
 
-    todo:
-      - rvm
-      - nvm
-      - yadr
+    # todo:
+    #   - rvm
+    #   - nvm
+    #   - yadr
 
-    db:
-      - mysql
-      - postgresql
-      - redis
-      - mongodb
+    # db:
+    #   - mysql
+    #   - postgresql
+    #   - redis
+    #   - mongodb
 
   tasks:
     - name: Install Homebrew packages
