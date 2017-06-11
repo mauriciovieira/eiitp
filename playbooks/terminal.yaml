@@ -10,6 +10,7 @@
       - gifsicle
       - git
       - heroku
+      - hub
       - imagemagick
       - passpie
       - yarn
