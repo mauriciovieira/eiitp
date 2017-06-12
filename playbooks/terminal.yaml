@@ -11,6 +11,7 @@
       - git
       - heroku
       - hub
+      - htop
       - imagemagick
       - passpie
       - yarn
