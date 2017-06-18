@@ -3,6 +3,8 @@
   hosts: all
 
   vars:
+    bitcoind_plist: "templates/Library/LaunchAgents/org.bitcoin.bitcoind.plist"
+    launch_agents_path: "~/Library/LaunchAgents/"
     packages:
       - bitcoin
 
@@ -10,3 +12,6 @@
     - name: Install Homebrew packages
       homebrew: name={{ item }} state=latest
       with_items: "{{ packages }}"
+
+    - name: Install bitcoind plist
+      copy: src="{{ bitcoind_plist }}" dest="{{ launch_agents_path }}" mode=600
