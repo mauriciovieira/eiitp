@@ -1,0 +1,12 @@
+---
+- name: Install criptocurrencies environment
+  hosts: all
+
+  vars:
+    packages:
+      - bitcoin
+
+  tasks:
+    - name: Install Homebrew packages
+      homebrew: name={{ item }} state=latest
+      with_items: "{{ packages }}"
