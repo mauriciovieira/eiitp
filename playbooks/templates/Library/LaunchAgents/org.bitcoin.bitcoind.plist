@@ -11,9 +11,5 @@
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
-	<key>StandardErrorPath</key>
-	<string>/tmp/bitcoind.err</string>
-	<key>StandardOutPath</key>
-	<string>/tmp/bitcoind.log</string>
 </dict>
 </plist>
