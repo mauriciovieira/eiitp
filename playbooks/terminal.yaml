@@ -10,15 +10,16 @@
       - gifsicle
       - git
       - heroku
-      - hub
       - htop
+      - hub
       - imagemagick
       - passpie
-      - yarn
-      - wget
       - pyenv
       - pyenv-virtualenv
       - pyenv-virtualenvwrapper
+      - shellcheck
+      - wget
+      - yarn
 
     rubygems:
       - travis
