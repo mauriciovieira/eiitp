@@ -7,13 +7,10 @@
       - macvim
 
     cask_packages:
-      - dropbox
       - electrum
       - firefox
       - google-chrome
-      - itau
       - iterm2
-      - libreoffice
       - screenhero
       - shiftit
       - skype
