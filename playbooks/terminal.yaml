@@ -3,6 +3,12 @@
   hosts: all
 
   vars:
+    aliases: "templates/shell/aliases.sh"
+    aliases_path: "~/.zsh.after/"
+
+    unwanted_packages:
+      - htop-osx
+
     packages:
       - ag
       - ffmpeg
@@ -36,6 +42,10 @@
     #   - mongodb
 
   tasks:
+    - name: Uninstall Homebrew packages
+      homebrew: name={{ item }} state=absent
+      with_items: "{{ unwanted_packages }}"
+
     - name: Install Homebrew packages
       homebrew: name={{ item }} state=latest
       with_items: "{{ packages }}"
@@ -43,3 +53,6 @@
     - name: Install ruby gems
       gem: name={{ item }} state=present
       with_items: "{{ rubygems }}"
+
+    - name: Install aliases
+      copy: src="{{ aliases }}" dest="{{ aliases_path }}" mode=644
