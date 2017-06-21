@@ -11,6 +11,7 @@
 
     packages:
       - ag
+      - docker-machine
       - ffmpeg
       - ghc
       - gifsicle
