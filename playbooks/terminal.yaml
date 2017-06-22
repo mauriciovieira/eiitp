@@ -3,7 +3,7 @@
   hosts: all
 
   vars:
-    aliases: "templates/shell/aliases.sh"
+    aliases: "templates/shell/aliases.zsh"
     aliases_path: "~/.zsh.after/"
 
     unwanted_packages:
