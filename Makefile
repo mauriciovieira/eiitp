@@ -21,3 +21,10 @@ install-desktop:
 install-boring-desktop:
 	@echo "Let's install boring destkop!"
 	ansible-playbook playbooks/boring-desktop.yaml
+
+update:
+	@echo "Synchronizing with github"
+	git checkout master
+	git pull --rebase
+
+now: update go
