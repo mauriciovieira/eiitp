@@ -55,7 +55,7 @@
       gem: name={{ item }} state=present
       with_items: "{{ rubygems }}"
 
-    - name: Ensures {{ aliases_path }} exists
+    - name: Ensure {{ aliases_path }} exists
       file: path={{ aliases_path }} state=directory
 
     - name: Install aliases
