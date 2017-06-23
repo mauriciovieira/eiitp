@@ -55,5 +55,8 @@
       gem: name={{ item }} state=present
       with_items: "{{ rubygems }}"
 
+    - name: Ensures {{ aliases_path }} exists
+      file: path={{ aliases_path }} state=directory
+
     - name: Install aliases
       copy: src="{{ aliases }}" dest="{{ aliases_path }}" mode=644
