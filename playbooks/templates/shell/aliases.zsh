@@ -2,15 +2,24 @@
 
 ## Apinf
 ### https://github.com/apinf/
-alias cd_apinf='cd ~/Repositories/github.com/apinf'
-alias cd_platform='cd ~/Repositories/github.com/apinf/platform'
+REPOSITORY_GH_APINF=~/Repositories/github.com/apinf
+alias cd_apinf="cd ${REPOSITORY_GH_APINF}"
+
+REPOSITORY_GH_APINF_PLATFORM="${REPOSITORY_GH_APINF}/platform"
+alias cd_platform="cd ${REPOSITORY_GH_APINF_PLATFORM}"
 
 ## Mauricio Vieira
 ### https://github.com/mauriciovieira/
-alias cd_mauriciovieira='cd ~/Repositories/github.com/mauriciovieira'
-alias cd_eiitp='cd ~/Repositories/github.com/mauriciovieira/eiitp/'
+REPOSITORY_GH_MV=~/Repositories/github.com/mauriciovieira/
+alias cd_mauriciovieira="cd ${REPOSITORY_GH_MV}"
+
+REPOSITORY_GH_MV_EIITP="${REPOSITORY_GH_MV}/eiitp"
+alias cd_eiitp="cd ${REPOSITORY_GH_MV_EIITP}"
 alias run_eiitp='cd_eiitp && make go'
-alias cd_mv_dot_net='cd ~/Repositories/github.com/mauriciovieira/mauriciovieira.net'
+
+REPOSITORY_GH_MV_MV_DOT_NET="${REPOSITORY_GH_MV}/mauriciovieira.net"
+alias cd_mv_dot_net="cd ${REPOSITORY_GH_MV_MV_DOT_NET}"
+
 alias ll='ls -alF'
 
 # Git

@@ -1,0 +1,2 @@
+# Every 30 minutes run git fetch for all repositories in $HOME/workspace
+0,30 * * * *	$HOME/workspace/development-environment/fetch-all-repos.sh &> /dev/null
