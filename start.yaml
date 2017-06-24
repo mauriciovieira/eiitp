@@ -4,3 +4,4 @@
 - include: playbooks/taps.yaml
 - include: playbooks/desktop.yaml
 - include: playbooks/terminal.yaml
+- include: playbooks/aliases.yaml

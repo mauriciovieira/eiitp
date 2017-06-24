@@ -1,0 +1,15 @@
+---
+- name: Install aliases
+  hosts: all
+
+  vars:
+    aliases: "templates/shell/aliases.zsh"
+    aliases_path: "~/.zsh.after/"
+
+  tasks: 
+    - name: Ensure {{ aliases_path }} exists
+      file: path={{ aliases_path }} state=directory
+
+    - name: Install aliases
+      copy: src="{{ aliases }}" dest="{{ aliases_path }}" mode=644
+

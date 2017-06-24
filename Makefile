@@ -14,6 +14,10 @@ install-terminal:
 	@echo "Let's install this terminal!"
 	ansible-playbook playbooks/terminal.yaml
 
+install-aliases:
+	@echo "Just aliases, please."
+	ansible-playbook playbooks/aliases.yaml
+
 install-desktop:
 	@echo "Let's install destkop!"
 	ansible-playbook playbooks/desktop.yaml

@@ -3,9 +3,6 @@
   hosts: all
 
   vars:
-    aliases: "templates/shell/aliases.zsh"
-    aliases_path: "~/.zsh.after/"
-
     unwanted_packages:
       - htop-osx
 
@@ -54,9 +51,3 @@
     - name: Install ruby gems
       gem: name={{ item }} state=present
       with_items: "{{ rubygems }}"
-
-    - name: Ensure {{ aliases_path }} exists
-      file: path={{ aliases_path }} state=directory
-
-    - name: Install aliases
-      copy: src="{{ aliases }}" dest="{{ aliases_path }}" mode=644
