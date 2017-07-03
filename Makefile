@@ -19,6 +19,10 @@ install-aliases:
 	ansible-playbook playbooks/aliases.yaml
 
 install-desktop:
+	@echo "Let's install some databases!"
+	ansible-playbook playbooks/databases.yaml
+
+install-desktop:
 	@echo "Let's install destkop!"
 	ansible-playbook playbooks/desktop.yaml
 
