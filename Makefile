@@ -18,7 +18,7 @@ install-aliases:
 	@echo "Just aliases, please."
 	ansible-playbook playbooks/aliases.yaml
 
-install-desktop:
+install-databases:
 	@echo "Let's install some databases!"
 	ansible-playbook playbooks/databases.yaml
 
