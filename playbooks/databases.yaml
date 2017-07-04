@@ -5,6 +5,7 @@
   vars:
     packages:
       - elasticsearch
+      - redis
 
   tasks:
     - name: Install Homebrew packages
