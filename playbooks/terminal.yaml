@@ -14,6 +14,7 @@
       - htop
       - hub
       - imagemagick
+      - parity
       - passpie
       - pyenv
       - pyenv-virtualenv
