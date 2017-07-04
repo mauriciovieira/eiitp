@@ -3,9 +3,6 @@
   hosts: all
 
   vars:
-    unwanted_packages:
-      - htop-osx
-
     packages:
       - ag
       - docker-machine
@@ -28,16 +25,13 @@
     rubygems:
       - travis
 
+    unwanted_packages:
+      - htop-osx
+
     # todo:
     #   - rvm
     #   - nvm
     #   - yadr
-
-    # db:
-    #   - mysql
-    #   - postgresql
-    #   - redis
-    #   - mongodb
 
   tasks:
     - name: Uninstall Homebrew packages
