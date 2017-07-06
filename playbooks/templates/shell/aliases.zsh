@@ -8,6 +8,9 @@ alias cd_apinf="cd ${REPOSITORY_GH_APINF}"
 REPOSITORY_GH_APINF_PLATFORM="${REPOSITORY_GH_APINF}/platform"
 alias cd_platform="cd ${REPOSITORY_GH_APINF_PLATFORM}"
 
+REPOSITORY_GH_APINF_APIBOT_AI="${REPOSITORY_GH_APINF}/apibot.ai"
+alias cd_apibot.ai="cd ${REPOSITORY_GH_APINF_APIBOT_AI}"
+
 ## Mauricio Vieira
 ### https://github.com/mauriciovieira/
 REPOSITORY_GH_MV=~/Repositories/github.com/mauriciovieira/
