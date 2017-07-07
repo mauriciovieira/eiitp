@@ -5,6 +5,7 @@
   vars:
     cask_packages:
       - dropbox
+      - gotomeeting
       - itau
       - libreoffice
 
