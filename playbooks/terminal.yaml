@@ -3,6 +3,9 @@
   hosts: all
 
   vars:
+    topsecret_repo: "git@gitlab.com:mauriciovieira/top-secret.git"
+    topsecret_path: "~/Repositories/gitlab.com/mauriciovieira/top-secret"
+
     packages:
       - ag
       - docker-machine
@@ -35,6 +38,15 @@
     #   - yadr
 
   tasks:
+    - name: Ensure {{ topsecret_path }} exists
+      file: path={{ topsecret_path }} state=directory
+
+    - name: Clone / update top-secret repository
+      git: repo={{ topsecret_repo }} dest="{{ topsecret_path }}" version=master
+
+    - name: Install top-secret stuff
+      shell: chdir="{{ topsecret_path }}" make install
+
     - name: Uninstall Homebrew packages
       homebrew: name={{ item }} state=absent
       with_items: "{{ unwanted_packages }}"
