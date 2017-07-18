@@ -60,6 +60,10 @@ alias gpf='git push --force'
 
 alias gs='git status'
 
+## Rebase
+
+alias gr='git rebase'
+
 ## Remote
 
 alias gRl='git remote -v'
