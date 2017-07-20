@@ -26,6 +26,9 @@
       - wget
       - yarn
 
+    cask_packages:
+      - ngrok
+
     rubygems:
       - travis
 
@@ -58,3 +61,7 @@
     - name: Install ruby gems
       gem: name={{ item }} state=present
       with_items: "{{ rubygems }}"
+
+    - name: Install Homebrew Cask packages
+      homebrew_cask: name={{ item }} state=latest
+      with_items: "{{ cask_packages }}"
