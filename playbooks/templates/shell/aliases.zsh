@@ -27,6 +27,8 @@ alias ll='ls -alF'
 
 # Git
 
+alias g='git'
+
 ## Checkout
 
 alias gco='git checkout'
