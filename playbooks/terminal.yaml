@@ -63,5 +63,5 @@
       with_items: "{{ rubygems }}"
 
     - name: Install Homebrew Cask packages
-      homebrew_cask: name={{ item }} state=latest
+      homebrew_cask: name={{ item }} state=installed
       with_items: "{{ cask_packages }}"
