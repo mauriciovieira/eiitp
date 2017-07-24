@@ -27,6 +27,7 @@
       - yarn
 
     cask_packages:
+      - java
       - ngrok
 
     rubygems:
