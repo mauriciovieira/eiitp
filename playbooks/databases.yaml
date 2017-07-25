@@ -5,6 +5,7 @@
   vars:
     packages:
       - elasticsearch
+      - postgres
       - redis
 
   tasks:
