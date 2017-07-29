@@ -30,6 +30,7 @@
     cask_packages:
       - java
       - ngrok
+      - virtualbox
 
     rubygems:
       - travis
