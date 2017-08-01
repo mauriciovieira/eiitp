@@ -7,6 +7,7 @@
       - macvim
 
     cask_packages:
+      - adobe-acrobat-reader
       - electrum
       - firefox
       - google-chrome
