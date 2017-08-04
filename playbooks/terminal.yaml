@@ -5,6 +5,7 @@
   vars:
     topsecret_repo: "git@gitlab.com:mauriciovieira/top-secret.git"
     topsecret_path: "~/Repositories/gitlab.com/mauriciovieira/top-secret"
+    screenshots_path: "~/Pictures/Screenshots"
 
     packages:
       - ag
@@ -68,3 +69,9 @@
     - name: Install Homebrew Cask packages
       homebrew_cask: name={{ item }} state=installed
       with_items: "{{ cask_packages }}"
+
+    - name: Ensure {{ screenshots_path }} exists
+      file: path={{ screenshots_path }} state=directory
+
+    - name: Set screenshots location
+      shell: defaults write com.apple.screencapture location {{ screenshots_path }}
