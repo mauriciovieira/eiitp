@@ -19,6 +19,7 @@
       - htop
       - hub
       - imagemagick
+      - mosh
       - parity
       - passpie
       - pyenv
