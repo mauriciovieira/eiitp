@@ -14,7 +14,7 @@ alias cd_apibot.ai="cd ${REPOSITORY_GH_APINF_APIBOT_AI}"
 ## Mauricio Vieira
 ### https://github.com/mauriciovieira/
 REPOSITORY_GH_MV=~/Repositories/github.com/mauriciovieira/
-alias cd_mauriciovieira="cd ${REPOSITORY_GH_MV}"
+alias cd_gh_mv="cd ${REPOSITORY_GH_MV}"
 
 REPOSITORY_GH_MV_EIITP="${REPOSITORY_GH_MV}/eiitp"
 alias cd_eiitp="cd ${REPOSITORY_GH_MV_EIITP}"
@@ -23,6 +23,11 @@ alias run_eiitp='cd_eiitp && make go'
 REPOSITORY_GH_MV_MV_DOT_NET="${REPOSITORY_GH_MV}/mauriciovieira.net"
 alias cd_mv_dot_net="cd ${REPOSITORY_GH_MV_MV_DOT_NET}"
 
+### https://gitlab.com/mauriciovieira/
+REPOSITORY_GL_MV=~/Repositories/gitlab.com/mauriciovieira/
+alias cd_gl_mv="cd ${REPOSITORY_GL_MV}"
+
+## Shell
 alias ll='ls -alF'
 
 # Git
