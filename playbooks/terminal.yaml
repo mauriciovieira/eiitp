@@ -5,6 +5,8 @@
   vars:
     topsecret_repo: "git@gitlab.com:mauriciovieira/top-secret.git"
     topsecret_path: "~/Repositories/gitlab.com/mauriciovieira/top-secret"
+    vscode_settings: "templates/Library/ApplicationSupport/Code/User/settings.json"
+    vscode_settings_path: "~/Library/Application Support/Code/User/"
     screenshots_path: "~/Pictures/Screenshots"
 
     packages:
@@ -76,3 +78,6 @@
 
     - name: Set screenshots location
       shell: defaults write com.apple.screencapture location {{ screenshots_path }}
+
+    - name: Install vscode settings
+      copy: src="{{ vscode_settings }}" dest="{{ vscode_settings_path }}" mode=0640
