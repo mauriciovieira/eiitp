@@ -83,6 +83,7 @@ alias ggv='git grep --invert-match'
 alias ggw='git grep --word-regexp'
 
 # Log (l)
+alias glg='git log'
 #alias gl='git log --topo-order --pretty=format:"${_git_log_medium_format}"'
 #alias gls='git log --topo-order --stat --pretty=format:"${_git_log_medium_format}"'
 #alias gld='git log --topo-order --stat --patch --full-diff --pretty=format:"${_git_log_medium_format}"'
@@ -97,6 +98,11 @@ alias gpoh='git push origin HEAD'
 alias gps='git push'
 alias gpf='git push --force'
 
+## Stash
+
+alias gst='git stash'
+alias gsp='git stash pop'
+
 ## Status
 
 alias gs='git status'
@@ -104,7 +110,11 @@ alias gs='git status'
 ## Rebase
 
 alias gr='git rebase'
+alias gri='git rebase --interactive'
+alias gra='git rebase --abort'
+alias grc='git rebase --continue'
 
 ## Remote
 
+alias gRa='git remote add'
 alias gRl='git remote -v'
