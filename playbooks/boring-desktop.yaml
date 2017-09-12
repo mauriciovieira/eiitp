@@ -8,6 +8,7 @@
       - gotomeeting
       - itau
       - libreoffice
+      - slack
 
   tasks:
     - name: Install Homebrew Cask packages
