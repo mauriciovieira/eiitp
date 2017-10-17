@@ -29,6 +29,7 @@ alias cd_gl_mv="cd ${REPOSITORY_GL_MV}"
 
 ## Shell
 alias ll='ls -alF'
+alias reset_camera='sudo killall VDCAssistant'
 
 # Git
 
