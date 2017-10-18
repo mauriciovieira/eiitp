@@ -1,8 +1,12 @@
 # Projects
 
+## Github
+REPOSITORY_GH=~/Repositories/github.com
+alias cd_gh="cd ${REPOSITORY_GH}"
+
 ## Apinf
 ### https://github.com/apinf/
-REPOSITORY_GH_APINF=~/Repositories/github.com/apinf
+REPOSITORY_GH_APINF=${REPOSITORY_GH}/apinf
 alias cd_apinf="cd ${REPOSITORY_GH_APINF}"
 
 REPOSITORY_GH_APINF_PLATFORM="${REPOSITORY_GH_APINF}/platform"
@@ -13,7 +17,7 @@ alias cd_apibot.ai="cd ${REPOSITORY_GH_APINF_APIBOT_AI}"
 
 ## Mauricio Vieira
 ### https://github.com/mauriciovieira/
-REPOSITORY_GH_MV=~/Repositories/github.com/mauriciovieira/
+REPOSITORY_GH_MV=${REPOSITORY_GH}/mauriciovieira/
 alias cd_gh_mv="cd ${REPOSITORY_GH_MV}"
 
 REPOSITORY_GH_MV_EIITP="${REPOSITORY_GH_MV}/eiitp"
@@ -23,8 +27,12 @@ alias run_eiitp='cd_eiitp && make go'
 REPOSITORY_GH_MV_MV_DOT_NET="${REPOSITORY_GH_MV}/mauriciovieira.net"
 alias cd_mv_dot_net="cd ${REPOSITORY_GH_MV_MV_DOT_NET}"
 
+## Gitlab
+REPOSITORY_GL=~/Repositories/gitlab.com
+alias cd_gl="cd ${REPOSITORY_GL}"
+
 ### https://gitlab.com/mauriciovieira/
-REPOSITORY_GL_MV=~/Repositories/gitlab.com/mauriciovieira/
+REPOSITORY_GL_MV=${REPOSITORY_GL}/mauriciovieira/
 alias cd_gl_mv="cd ${REPOSITORY_GL_MV}"
 
 ## Shell
