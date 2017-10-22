@@ -5,6 +5,7 @@
   vars:
     packages:
       - elasticsearch
+      - mysql
       - postgres
       - redis
 
