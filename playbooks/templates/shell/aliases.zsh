@@ -39,6 +39,21 @@ alias cd_gl_mv="cd ${REPOSITORY_GL_MV}"
 alias ll='ls -alF'
 alias reset_camera='sudo killall VDCAssistant'
 
+
+# Functions
+
+git-branch-current() {
+  ref="$(git symbolic-ref HEAD 2> /dev/null)"
+
+  if [[ -n "$ref" ]]; then
+    echo  "${ref#refs/heads/}"
+    return 0
+  else
+    return 1
+  fi
+}
+
+
 # Git
 
 alias g='git'
@@ -103,14 +118,21 @@ alias glg='git log'
 
 ## Push
 
-alias gpoh='git push origin HEAD'
-alias gps='git push'
+alias gpA='git push --all && git push --tags'
+alias gpa='git push --all'
+alias gpc='git push --set-upstream origin "$(git-branch-current 2> /dev/null)"'
 alias gpf='git push --force'
+alias gps='git push'
+alias gpt='git push --tags'
 
 ## Stash
 
-alias gst='git stash'
+alias gls='git stash list'
+alias gsS='git stash save --patch --no-keep-index'
 alias gsp='git stash pop'
+alias gss='git stash save --include-untracked'
+alias gst='git stash'
+alias gsx='git stash drop'
 
 ## Status
 
