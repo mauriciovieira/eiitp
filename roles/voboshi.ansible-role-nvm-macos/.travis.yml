@@ -1,0 +1,29 @@
+---
+sudo: required
+language: objective-c
+matrix:
+  include:
+    # macOS 10.12
+    - osx_image: xcode8.3
+
+install:
+  # Debug info
+  - python --version
+  # Install pip
+  - sudo easy_install pip
+  # Install Ansible
+  - sudo pip install ansible --quiet
+  # Debug info
+  - pip --version
+  - ansible --version
+script:
+  - rm -rf ~/.nvm # Temporary hack, as Travis-CI already has nvm.
+  - cd tests
+    # Syntax check
+  - ansible-playbook test.yml -i inventory-local --syntax-check
+    # Run test playbook
+  - ansible-playbook -i inventory-local test.yml
+  - source ~/.bash_profile
+  - node --version | grep '6.10.3'
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/

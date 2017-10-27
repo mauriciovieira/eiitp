@@ -1,0 +1,16 @@
+galaxy_info:
+  author: voboshi
+  description: nvm on macOS!
+  license: MIT
+  min_ansible_version: 2.0
+  platforms:
+  - name: MacOSX
+    versions:
+    - '10.12'
+  galaxy_tags:
+  - nvm
+  - node
+  - nodejs
+  - osx
+  - mac
+  - macos

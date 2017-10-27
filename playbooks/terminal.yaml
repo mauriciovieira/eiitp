@@ -82,3 +82,9 @@
 
     - name: Install vscode settings
       copy: src="{{ vscode_settings }}" dest="{{ vscode_settings_path }}" mode=0640
+
+  # roles:
+  #   - role: voboshi.ansible-role-nvm-macos
+  #     nvm:
+  #       version: v0.33.2
+  #       node_version: '8.7.0'
