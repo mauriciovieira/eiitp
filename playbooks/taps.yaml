@@ -1,6 +1,7 @@
 ---
 - name: Setup homebrew taps
   hosts: all
+  gather_facts: no
 
   vars:
     taps:

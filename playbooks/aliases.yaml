@@ -1,6 +1,7 @@
 ---
 - name: Install aliases
   hosts: all
+  gather_facts: no
 
   vars:
     aliases: "templates/shell/aliases.zsh"

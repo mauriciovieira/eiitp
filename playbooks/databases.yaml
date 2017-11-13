@@ -1,6 +1,7 @@
 ---
 - name: Install databases
   hosts: all
+  gather_facts: no
 
   vars:
     packages:

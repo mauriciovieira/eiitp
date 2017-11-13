@@ -1,6 +1,7 @@
 ---
 - name: Install terminal environment
   hosts: all
+  gather_facts: no
 
   vars:
     topsecret_repo: "git@gitlab.com:mauriciovieira/top-secret.git"

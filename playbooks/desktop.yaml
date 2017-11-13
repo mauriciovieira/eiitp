@@ -1,6 +1,7 @@
 ---
 - name: Install desktop environment
   hosts: all
+  gather_facts: no
 
   vars:
     packages:

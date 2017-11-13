@@ -1,6 +1,7 @@
 ---
 - name: Install criptocurrencies environment
   hosts: all
+  gather_facts: no
 
   vars:
     bitcoind_plist: "templates/Library/LaunchAgents/org.bitcoin.bitcoind.plist"

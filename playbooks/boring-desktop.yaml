@@ -1,6 +1,7 @@
 ---
 - name: Install problematic desktop environment
   hosts: all
+  gather_facts: no
 
   vars:
     cask_packages:
