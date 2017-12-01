@@ -12,6 +12,7 @@
 
     packages:
       - ag
+      - certbot
       - cmake
       - docker-compose
       - docker-machine
