@@ -13,7 +13,6 @@
       - firefox
       - google-chrome
       - iterm2
-      - screenhero
       - shiftit
       - skype
       - telegram
@@ -21,6 +20,7 @@
 
     unwanted_packages:
       - evernote
+      - screenhero
 
   tasks:
     - name: Install Homebrew packages
