@@ -149,3 +149,7 @@ alias grc='git rebase --continue'
 
 alias gRa='git remote add'
 alias gRl='git remote -v'
+
+## MacOS
+
+alias o='open'
