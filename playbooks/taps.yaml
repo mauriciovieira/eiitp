@@ -7,7 +7,6 @@
     taps:
       - caskroom/versions
       - homebrew/versions
-      - thoughtbot/formulae
 
   tasks:
     - name: Add Homebrew taps
