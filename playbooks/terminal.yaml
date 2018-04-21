@@ -14,8 +14,6 @@
       - ag
       - certbot
       - cmake
-      - docker-compose
-      - docker-machine
       - ffmpeg
       - ghc
       - gifsicle
@@ -44,6 +42,8 @@
       - travis
 
     unwanted_packages:
+      - docker-compose
+      - docker-machine
       - htop-osx
 
     # todo:
