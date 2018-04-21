@@ -18,6 +18,7 @@
       - ghc
       - gifsicle
       - git
+      - go
       - heroku
       - htop
       - hub
