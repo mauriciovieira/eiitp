@@ -47,12 +47,22 @@
       - docker-machine
       - htop-osx
 
+    go_directories:
+      - ~/workspace/Go/src/github.com/mauriciovieira
+      - ~/workspace/Go/bin
+      - ~/workspace/Go/pkg
+
+
     # todo:
     #   - rvm
     #   - nvm
     #   - yadr
 
   tasks:
+    - name: Ensure Go directories exist
+      file: path="{{ item }}" state=directory
+      with_items: "{{ go_directories }}"
+
     - name: Ensure {{ topsecret_path }} exists
       file: path={{ topsecret_path }} state=directory
 
