@@ -34,6 +34,6 @@
       with_items: "{{ unwanted_packages }}"
 
     - name: Install Homebrew Cask packages
-      homebrew_cask: name={{ item }} state=present
+      homebrew_cask: name={{ item }} state=latest
       with_items: "{{ cask_packages }}"
 
