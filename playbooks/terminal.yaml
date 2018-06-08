@@ -34,6 +34,8 @@
       - shellcheck
       - wget
       - yarn
+      - zsh
+      - zsh-completions
 
     cask_packages:
       - java

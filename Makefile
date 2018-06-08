@@ -30,6 +30,10 @@ install-boring-desktop:
 	@echo "Let's install boring destkop!"
 	ansible-playbook playbooks/boring-desktop.yaml
 
+oh-my-zsh:
+	@echo "Are you there, oh-my-zsh?"
+	ansible-playbook playbooks/oh-my-zsh.yaml
+
 update:
 	@echo "Synchronizing with github"
 	git checkout master

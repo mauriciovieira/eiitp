@@ -1,0 +1,23 @@
+---
+- name: Install oh-my-zsh
+  hosts: all
+  gather_facts: yes
+
+# Inspired by https://github.com/RaymiiOrg/ansible/blob/master/oh-my-zsh/ohmyzsh.yml
+
+  vars:
+    oh_my_zsh_repo: "https://github.com/robbyrussell/oh-my-zsh.git"
+    oh_my_zsh_dir: "~/.oh-my-zsh"
+    zshrc: "templates/shell/.zshrc"
+
+  tasks:
+    - name: Clone oh-my-zsh repository
+      git: repo="{{ oh_my_zsh_repo }}" dest="{{ oh_my_zsh_dir }}" version=master
+
+    - name: Install zshrc
+      copy: src="{{ zshrc }}" dest="{{ ansible_user_dir }}" mode=0640
+
+
+    # - name: Set zsh as default shell
+    #   user: name={{ ansible_user_id }} shell=/bin/zsh
+    # chsh -s /bin/zsh
