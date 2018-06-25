@@ -19,6 +19,7 @@
       - ghc
       - gifsicle
       - git
+      - gnu-indent
       - go
       - heroku
       - htop
