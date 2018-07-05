@@ -29,6 +29,7 @@
       - mosh
       - parity
       - passpie
+      - pv
       - pyenv
       - pyenv-virtualenv
       - pyenv-virtualenvwrapper
