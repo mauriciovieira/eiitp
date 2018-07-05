@@ -41,6 +41,7 @@
     cask_packages:
       - java
       - ngrok
+      - vagrant
       - virtualbox
 
     rubygems:
