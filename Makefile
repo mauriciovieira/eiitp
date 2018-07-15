@@ -30,6 +30,10 @@ install-boring-desktop:
 	@echo "Let's install boring destkop!"
 	ansible-playbook playbooks/boring-desktop.yaml
 
+golang:
+	@echo "Golang, yeah! Gophers go!"
+	ansible-playbook playbooks/golang.yaml
+
 oh-my-zsh:
 	@echo "Are you there, oh-my-zsh?"
 	ansible-playbook playbooks/oh-my-zsh.yaml
