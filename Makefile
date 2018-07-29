@@ -34,6 +34,10 @@ golang:
 	@echo "Golang, yeah! Gophers go!"
 	ansible-playbook playbooks/golang.yaml
 
+nvm:
+	@echo "Nvm, I need you!"
+	ansible-playbook playbooks/nvm.yaml
+
 oh-my-zsh:
 	@echo "Are you there, oh-my-zsh?"
 	ansible-playbook playbooks/oh-my-zsh.yaml

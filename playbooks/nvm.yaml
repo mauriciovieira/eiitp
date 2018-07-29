@@ -1,0 +1,20 @@
+---
+- name: Install nvm
+  hosts: all
+  gather_facts: yes
+
+  vars:
+    nvm_repo: "https://github.com/creationix/nvm.git"
+    nvm_version: v0.33.11
+    nvm_dir: "~/.nvm"
+
+  tasks:
+    - name: Clone nvm repository
+      git: repo="{{ nvm_repo }}" dest="{{ nvm_dir }}" version="{{ nvm_version }}
+
+    - name: Install latest version
+      shell: |
+        cd "$NVM_DIR"
+        git fetch origin
+        TAG=$(git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1))
+        git checkout $TAG
