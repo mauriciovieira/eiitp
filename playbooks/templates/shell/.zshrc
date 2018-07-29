@@ -113,4 +113,4 @@ export NVM_DIR="$HOME/.nvm"
 export GOPATH="$HOME/workspace/Go"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.composer/vendor/bin:$HOME/.rvm/bin"
+export PATH="$PATH:$HOME/.composer/vendor/bin:$HOME/.rvm/bin:$GOPATH/bin"
