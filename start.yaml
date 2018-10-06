@@ -2,7 +2,7 @@
 - hosts: all
   gather_facts: no
 
-- include: playbooks/taps.yaml
-- include: playbooks/desktop.yaml
-- include: playbooks/terminal.yaml
-- include: playbooks/aliases.yaml
+- import_playbook: playbooks/taps.yaml
+- import_playbook: playbooks/desktop.yaml
+- import_playbook: playbooks/terminal.yaml
+- import_playbook: playbooks/aliases.yaml
