@@ -5,8 +5,8 @@
 
   vars:
     taps:
-      - caskroom/versions
-      - homebrew/versions
+      - homebrew/cask-versions
+      - homebrew/core
       - thoughtbot/formulae
 
   tasks:
