@@ -20,18 +20,10 @@
       - telegram
       - visual-studio-code
 
-    unwanted_packages:
-      - evernote
-      - screenhero
-
   tasks:
     - name: Install Homebrew packages
       homebrew: name={{ item }} state=latest
       with_items: "{{ packages }}"
-
-    - name: Uninstall Homebrew Cask packages
-      homebrew: name={{ item }} state=absent
-      with_items: "{{ unwanted_packages }}"
 
     - name: Install Homebrew Cask packages
       homebrew_cask: name={{ item }} state=latest
