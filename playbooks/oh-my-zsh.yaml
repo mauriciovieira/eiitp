@@ -1,5 +1,5 @@
 ---
-- name: Install oh-my-zsh
+- name: Install oh-my-zsh and configure ssh
   hosts: all
   gather_facts: yes
 
@@ -9,6 +9,9 @@
     oh_my_zsh_repo: "https://github.com/robbyrussell/oh-my-zsh.git"
     oh_my_zsh_dir: "~/.oh-my-zsh"
     zshrc: "templates/shell/.zshrc"
+    src_ssh_config: "templates/shell/ssh-config"
+    dst_ssh_config: "~/.ssh/config"
+
 
   tasks:
     - name: Clone oh-my-zsh repository
@@ -17,6 +20,8 @@
     - name: Install zshrc
       copy: src="{{ zshrc }}" dest="{{ ansible_user_dir }}" mode=0640
 
+    - name: Install sshconfig
+      copy: src="{{ src_ssh_config }}" dest="{{ dst_ssh_config }}" mode=0600
 
     # - name: Set zsh as default shell
     #   user: name={{ ansible_user_id }} shell=/bin/zsh
