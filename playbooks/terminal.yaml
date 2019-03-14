@@ -36,6 +36,7 @@
       - shellcheck
       - wget
       - yarn
+      - zlib
       - zsh
       - zsh-completions
 
