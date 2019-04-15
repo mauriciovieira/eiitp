@@ -11,6 +11,8 @@
     zshrc: "templates/shell/.zshrc"
     src_ssh_config: "templates/shell/ssh-config"
     dst_ssh_config: "~/.ssh/config"
+    src_gitconfig: "templates/shell/gitconfig"
+    dst_gitconfig: "~/.gitconfig"
 
 
   tasks:
@@ -22,6 +24,10 @@
 
     - name: Install sshconfig
       copy: src="{{ src_ssh_config }}" dest="{{ dst_ssh_config }}" mode=0600
+
+    - name: Install gitconfig
+      copy: src="{{ src_gitconfig }}" dest="{{ dst_gitconfig }}" mode=0644
+
 
     # - name: Set zsh as default shell
     #   user: name={{ ansible_user_id }} shell=/bin/zsh
