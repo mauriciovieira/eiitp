@@ -70,12 +70,10 @@
       shell: chdir="{{ topsecret_path }}" make install
 
     - name: Uninstall Homebrew packages
-      homebrew: name={{ item }} state=absent
-      with_items: "{{ unwanted_packages }}"
+      homebrew: name={{ unwanted_packages }} state=absent
 
     - name: Install Homebrew packages
-      homebrew: name={{ item }} state=latest
-      with_items: "{{ packages }}"
+      homebrew: name={{ packages }} state=latest
 
     - name: Install ruby gems
       gem: name={{ item }} state=present

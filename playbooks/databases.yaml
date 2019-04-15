@@ -12,5 +12,4 @@
 
   tasks:
     - name: Install Homebrew packages
-      homebrew: name={{ item }} state=latest
-      with_items: "{{ packages }}"
+      homebrew: name={{ packages }} state=latest
