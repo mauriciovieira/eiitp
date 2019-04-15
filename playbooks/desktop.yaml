@@ -9,6 +9,7 @@
 
     cask_packages:
       - adobe-acrobat-reader
+      - caffeine
       - docker
       - electrum
       - firefox
