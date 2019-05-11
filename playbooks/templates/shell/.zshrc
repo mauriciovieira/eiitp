@@ -99,21 +99,27 @@ then
   source ~/.zsh.after/secret-aliases.zsh
 fi
 
+# j for autojump
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+# pyenv python version manager
 export WORKON_HOME=~/.ve
 export PROJECT_HOME=~/workspace
+export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
-pyenv virtualenvwrapper_lazy
+eval "$(pyenv virtualenv-init -)"
 
+# nvm node version manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-
+# golang setup
 export GOPATH="$HOME/workspace/Go"
+export PATH="$PATH:$GOPATH/bin"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.composer/vendor/bin:$HOME/.rvm/bin:$GOPATH/bin"
+export PATH="$PATH:$HOME/.composer/vendor/bin:$HOME/.rvm/bin"
 
 # https://github.com/jiansoung/issues-list/issues/13
 # For compilers to find zlib you may need to set:
