@@ -20,6 +20,7 @@
       - ghc
       - gifsicle
       - git
+      - git-flow-avh
       - gnu-indent
       - heroku
       - htop
