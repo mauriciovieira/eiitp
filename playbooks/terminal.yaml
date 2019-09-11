@@ -35,6 +35,7 @@
       - pyenv-virtualenv
       - pyenv-virtualenvwrapper
       - shellcheck
+      - terminal-notifier
       - wget
       - yarn
       - zlib
