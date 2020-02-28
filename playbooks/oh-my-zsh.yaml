@@ -28,7 +28,6 @@
     - name: Install gitconfig
       copy: src="{{ src_gitconfig }}" dest="{{ dst_gitconfig }}" mode=0644
 
-
     # - name: Set zsh as default shell
     #   user: name={{ ansible_user_id }} shell=/bin/zsh
     # chsh -s /bin/zsh

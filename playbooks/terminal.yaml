@@ -13,6 +13,7 @@
     packages:
       - ag
       - autojump
+      - ccat
       - certbot
       - cmake
       - composer

@@ -43,6 +43,10 @@ git-branch-current() {
 }
 
 
+# ccat
+
+alias cat='ccat'
+
 # Git
 
 alias g='git'
