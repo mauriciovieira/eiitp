@@ -59,7 +59,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  rails
+  asdf
   git
   ruby
 )
@@ -101,8 +101,11 @@ then
   source ~/.zsh.after/secret-aliases.zsh
 fi
 
+# Load asdf
+[ -f /usr/local/opt/asdf/asdf.sh ] && source /usr/local/opt/asdf/asdf.sh
+
 # j for autojump
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+[ -f /usr/local/etc/profile.d/autojump.sh ] && source /usr/local/etc/profile.d/autojump.sh
 
 # pyenv python version manager
 export WORKON_HOME=~/.ve

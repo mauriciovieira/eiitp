@@ -12,6 +12,7 @@
 
     packages:
       - ag
+      - asdf
       - autojump
       - ccat
       - certbot
