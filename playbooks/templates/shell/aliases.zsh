@@ -146,3 +146,36 @@ alias gRl='git remote -v'
 ## MacOS
 
 alias o='open'
+
+_minikube_root="$HOME/Repositories/github.com/mauriciovieira/minikube-helloworld"
+
+## Asdf
+
+# asdf versions
+MINIKUBE_VERSION=1.8.2
+SKAFFOLD_VERSION=1.5.0
+KUSTOMIZE_VERSION=3.5.4
+
+_asdf() {
+  pushd "$_minikube_root" >/dev/null
+
+  asdf local minikube ${MINIKUBE_VERSION} || ( \
+    asdf plugin add minikube https://github.com/alvarobp/asdf-minikube.git
+    asdf install minikube ${MINIKUBE_VERSION} && \
+    asdf local minikube ${MINIKUBE_VERSION} \
+  )
+
+  asdf local skaffold ${SKAFFOLD_VERSION} || ( \
+    asdf plugin add skaffold https://github.com/virtualstaticvoid/asdf-skaffold.git && \
+    asdf install skaffold ${SKAFFOLD_VERSION} && \
+    asdf local skaffold ${SKAFFOLD_VERSION} \
+  )
+
+  asdf local kustomize ${KUSTOMIZE_VERSION} || ( \
+    asdf plugin add kustomize https://github.com/Banno/asdf-kustomize.git && \
+    asdf install kustomize ${KUSTOMIZE_VERSION} && \
+    asdf local kustomize ${KUSTOMIZE_VERSION} \
+  )
+
+  popd >/dev/null
+}
