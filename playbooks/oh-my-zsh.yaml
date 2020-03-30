@@ -9,6 +9,9 @@
     oh_my_zsh_repo: "https://github.com/robbyrussell/oh-my-zsh.git"
     oh_my_zsh_dir: "~/.oh-my-zsh"
     zshrc: "templates/shell/.zshrc"
+    asdfrc: "templates/shell/.asdfrc"
+    tool_versions: "templates/shell/.tool-versions"
+    default_gems: "templates/shell/.default-gems"
     src_ssh_config: "templates/shell/ssh-config"
     dst_ssh_config: "~/.ssh/config"
     src_gitconfig: "templates/shell/gitconfig"
@@ -27,6 +30,15 @@
 
     - name: Install gitconfig
       copy: src="{{ src_gitconfig }}" dest="{{ dst_gitconfig }}" mode=0644
+
+    - name: Configure asdf - install .asdfrc
+      copy: src="{{ asdfrc }}" dest="{{ ansible_user_dir }}" mode=0640
+
+    - name: Configure asdf - install .default-gems
+      copy: src="{{ default_gems }}" dest="{{ ansible_user_dir }}" mode=0640
+
+    - name: Configure asdf - install .tool-versions
+      copy: src="{{ tool_versions }}" dest="{{ ansible_user_dir }}" mode=0640
 
     # - name: Set zsh as default shell
     #   user: name={{ ansible_user_id }} shell=/bin/zsh

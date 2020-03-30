@@ -50,18 +50,10 @@
       - vagrant
       - virtualbox
 
-    rubygems:
-      - travis
-
     unwanted_packages:
       - docker-compose
       - docker-machine
       - htop-osx
-
-    # todo:
-    #   - rvm
-    #   - nvm
-    #   - yadr
 
   tasks:
     - name: Ensure {{ topsecret_path }} exists
@@ -79,10 +71,6 @@
     - name: Install Homebrew packages
       homebrew: name={{ packages }} state=latest
 
-    - name: Install ruby gems
-      gem: name={{ item }} state=present
-      with_items: "{{ rubygems }}"
-
     - name: Install Homebrew Cask packages
       homebrew_cask: name={{ item }} state=installed
       with_items: "{{ cask_packages }}"
@@ -95,9 +83,3 @@
 
     - name: Install vscode settings
       copy: src="{{ vscode_settings }}" dest="{{ vscode_settings_path }}" mode=0640
-
-  # roles:
-  #   - role: voboshi.ansible-role-nvm-macos
-  #     nvm:
-  #       version: v0.33.2
-  #       node_version: '8.7.0'
