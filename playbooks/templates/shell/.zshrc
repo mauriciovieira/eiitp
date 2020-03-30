@@ -61,7 +61,6 @@ ZSH_THEME="robbyrussell"
 plugins=(
   asdf
   git
-  ruby
 )
 
 source $ZSH/oh-my-zsh.sh
