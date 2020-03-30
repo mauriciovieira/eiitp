@@ -47,4 +47,8 @@ update:
 	git checkout master
 	git pull --rebase
 
+clean:
+	@echo "Let's clean up"
+	git clean -df
+
 now: update go
