@@ -1,1 +1,4 @@
+kustomize 3.5.4
+minikube 1.8.2
 ruby 2.7.0
+skaffold 1.5.0
