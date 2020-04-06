@@ -42,6 +42,9 @@ git-branch-current() {
   fi
 }
 
+# bundle
+
+alias be='bundle exec'
 
 # ccat
 
