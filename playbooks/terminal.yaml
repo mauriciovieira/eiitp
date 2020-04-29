@@ -62,19 +62,30 @@
 
     - name: Clone / update top-secret repository
       git: repo={{ topsecret_repo }} dest="{{ topsecret_path }}" version=master
+      tags:
+        - top_secret
 
     - name: Install top-secret stuff
       shell: chdir="{{ topsecret_path }}" make install
+      tags:
+        - top_secret
 
     - name: Uninstall Homebrew packages
       homebrew: name={{ unwanted_packages }} state=absent
+      tags:
+        - homebrew
 
     - name: Install Homebrew packages
       homebrew: name={{ packages }} state=latest
+      tags:
+        - homebrew
+        - homebrew_only
 
     - name: Install Homebrew Cask packages
-      homebrew_cask: name={{ item }} state=installed
-      with_items: "{{ cask_packages }}"
+      homebrew_cask: name={{ cask_packages }} state=installed
+      tags:
+        - homebrew
+        - homebrew_cask
 
     - name: Ensure {{ screenshots_path }} exists
       file: path={{ screenshots_path }} state=directory
