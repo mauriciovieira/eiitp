@@ -8,37 +8,32 @@
   vars:
     oh_my_zsh_repo: "https://github.com/robbyrussell/oh-my-zsh.git"
     oh_my_zsh_dir: "~/.oh-my-zsh"
-    zshrc: "templates/shell/.zshrc"
-    asdfrc: "templates/shell/.asdfrc"
-    tool_versions: "templates/shell/.tool-versions"
-    default_gems: "templates/shell/.default-gems"
     src_ssh_config: "templates/shell/ssh-config"
     dst_ssh_config: "~/.ssh/config"
-    src_gitconfig: "templates/shell/gitconfig"
-    dst_gitconfig: "~/.gitconfig"
 
+    dotfiles:
+      - "templates/shell/.zshrc"
+      - "templates/shell/.asdfrc"
+      - "templates/shell/.tool-versions"
+      - "templates/shell/.default-gems"
+      - "templates/shell/.gitconfig"
 
   tasks:
     - name: Clone oh-my-zsh repository
       git: repo="{{ oh_my_zsh_repo }}" dest="{{ oh_my_zsh_dir }}" version=master
+      tags:
+        - clone
 
-    - name: Install zshrc
-      copy: src="{{ zshrc }}" dest="{{ ansible_user_dir }}" mode=0640
-
-    - name: Install sshconfig
+    - name: Install ssh_config
       copy: src="{{ src_ssh_config }}" dest="{{ dst_ssh_config }}" mode=0600
+      tags:
+        - ssh_config
 
-    - name: Install gitconfig
-      copy: src="{{ src_gitconfig }}" dest="{{ dst_gitconfig }}" mode=0644
-
-    - name: Configure asdf - install .asdfrc
-      copy: src="{{ asdfrc }}" dest="{{ ansible_user_dir }}" mode=0640
-
-    - name: Configure asdf - install .default-gems
-      copy: src="{{ default_gems }}" dest="{{ ansible_user_dir }}" mode=0640
-
-    - name: Configure asdf - install .tool-versions
-      copy: src="{{ tool_versions }}" dest="{{ ansible_user_dir }}" mode=0640
+    - name: Install dotfiles to user directory
+      copy: src="{{ item }}" dest="{{ ansible_user_dir }}" mode=0640
+      loop: "{{ dotfiles }}"
+      tags:
+        - dotfiles
 
     # - name: Set zsh as default shell
     #   user: name={{ ansible_user_id }} shell=/bin/zsh
