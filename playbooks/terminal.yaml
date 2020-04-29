@@ -15,7 +15,6 @@
       - asdf
       - autojump
       - bats
-      - ccat
       - certbot
       - cmake
       - composer
@@ -34,9 +33,6 @@
       - parity
       - passpie
       - pv
-      - pyenv
-      - pyenv-virtualenv
-      - pyenv-virtualenvwrapper
       - shellcheck
       - terminal-notifier
       - wget
@@ -52,9 +48,13 @@
       - virtualbox
 
     unwanted_packages:
+      - ccat
       - docker-compose
       - docker-machine
       - htop-osx
+      - pyenv-virtualenvwrapper
+      - pyenv-virtualenv
+      - pyenv
 
   tasks:
     - name: Ensure {{ topsecret_path }} exists
