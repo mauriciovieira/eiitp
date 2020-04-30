@@ -1,0 +1,19 @@
+---
+
+- name: Install dependencies with apt
+  become: True
+  apt:
+    name: "{{ asdf_dependencies }}"
+    update_cache: true
+  when: ansible_os_family == "Debian" or ansible_os_family == "Pengwin"
+
+- name: Install dependencies with Homebrew
+  homebrew:
+    name: "{{ asdf_dependencies }}"
+  when: ansible_os_family == "Darwin"
+
+- name: "Clone asdf repository"
+  git:
+    repo: "{{ asdf_git_repo }}"
+    dest: "{{ asdf_dir }}"
+    version: "{{ asdf_version }}"

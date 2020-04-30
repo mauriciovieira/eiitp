@@ -1,0 +1,5 @@
+---
+
+asdf_git_repo: "https://github.com/asdf-vm/asdf.git"
+asdf_home: "{{ ansible_env.HOME }}"
+asdf_dir: "{{ asdf_home }}/.asdf"
