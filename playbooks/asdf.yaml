@@ -22,9 +22,9 @@
             - "3.8.2"
         - name: ruby
           versions:
-            - "2.6.5"
+            - "2.6.6"
             - "2.7.0"
-          global: "2.6.5"
+          global: "2.6.6"
         - name: skaffold
           repository: "https://github.com/virtualstaticvoid/asdf-skaffold.git"
           versions:
