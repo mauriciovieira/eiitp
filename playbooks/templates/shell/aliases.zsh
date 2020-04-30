@@ -46,10 +46,6 @@ git-branch-current() {
 
 alias be='bundle exec'
 
-# ccat
-
-alias cat='ccat'
-
 # Git
 
 alias g='git'

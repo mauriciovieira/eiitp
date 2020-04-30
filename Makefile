@@ -38,9 +38,13 @@ nvm:
 	@echo "Nvm, I need you!"
 	ansible-playbook playbooks/nvm.yaml
 
-oh-my-zsh:
+install-shell:
 	@echo "Are you there, oh-my-zsh?"
-	ansible-playbook playbooks/oh-my-zsh.yaml
+	ansible-playbook playbooks/shell.yaml
+
+install-asdf:
+	@echo "Please, asdf, could you manage my tools?"
+	ansible-playbook playbooks/asdf.yaml
 
 update:
 	@echo "Synchronizing with github"

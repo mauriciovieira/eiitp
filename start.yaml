@@ -3,6 +3,8 @@
   gather_facts: no
 
 - import_playbook: playbooks/taps.yaml
+- import_playbook: playbooks/shell.yaml
+- import_playbook: playbooks/asdf.yaml
+- import_playbook: playbooks/aliases.yaml
 - import_playbook: playbooks/desktop.yaml
 - import_playbook: playbooks/terminal.yaml
-- import_playbook: playbooks/aliases.yaml

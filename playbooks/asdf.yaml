@@ -1,0 +1,28 @@
+---
+- name: Install asdf with desired plugins
+  hosts: all
+  gather_facts: yes
+
+  roles:
+    - name: "markosamuli.asdf"
+      asdf_plugins:
+        - name: kustomize
+          repository: "https://github.com/Banno/asdf-kustomize.git"
+          versions:
+            - "3.5.4"
+        - name: minukube
+          repository: "https://github.com/alvarobp/asdf-minikube.git"
+          versions:
+            - "1.8.2"
+        - name: python
+          versions:
+            - "3.8.2"
+        - name: ruby
+          versions:
+            - "2.6.5"
+            - "2.7.0"
+          global: "2.6.5"
+        - name: skaffold
+          repository: "https://github.com/virtualstaticvoid/asdf-skaffold.git"
+          versions:
+            - "1.5.0"

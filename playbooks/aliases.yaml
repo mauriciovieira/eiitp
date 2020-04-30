@@ -7,7 +7,7 @@
     aliases: "templates/shell/aliases.zsh"
     aliases_path: "~/.zsh.after/"
 
-  tasks: 
+  tasks:
     - name: Ensure {{ aliases_path }} exists
       file: path={{ aliases_path }} state=directory
 

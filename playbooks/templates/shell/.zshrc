@@ -59,7 +59,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  asdf
+  #asdf
   git
 )
 
@@ -100,8 +100,12 @@ then
   source ~/.zsh.after/secret-aliases.zsh
 fi
 
-# Load asdf
-[ -f /usr/local/opt/asdf/asdf.sh ] && source /usr/local/opt/asdf/asdf.sh
+# BEGIN ANSIBLE MANAGED BLOCK: asdf
+if [ -e "$HOME/.asdf/asdf.sh" ]; then
+  source $HOME/.asdf/asdf.sh
+  source $HOME/.asdf/completions/asdf.bash
+fi
+# END ANSIBLE MANAGED BLOCK: asdf
 
 # j for autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && source /usr/local/etc/profile.d/autojump.sh
