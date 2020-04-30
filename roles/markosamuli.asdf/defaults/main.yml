@@ -3,7 +3,7 @@
 ---
 
 # asdf version to install
-asdf_version: "v0.7.2"
+asdf_version: "v0.7.8"
 
 # see README.md for example configuration
 asdf_plugins: []
