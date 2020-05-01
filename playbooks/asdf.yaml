@@ -6,8 +6,6 @@
   roles:
     - name: "markosamuli.asdf"
       asdf_init_shell: false
-      asdf_git_repo: "https://github.com/mauriciovieira/asdf.git"
-      asdf_version: "master"
       asdf_plugins:
         - name: kustomize
           repository: "https://github.com/Banno/asdf-kustomize.git"
