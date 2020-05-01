@@ -15,6 +15,9 @@
           repository: "https://github.com/alvarobp/asdf-minikube.git"
           versions:
             - "1.8.2"
+        - name: nodejs # bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+          versions:
+            - "14.1.0"
         - name: python
           versions:
             - "3.8.2"
