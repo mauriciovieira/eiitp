@@ -51,6 +51,7 @@
       - ccat
       - docker-compose
       - docker-machine
+      - firefox
       - htop-osx
       - pyenv-virtualenvwrapper
       - pyenv-virtualenv

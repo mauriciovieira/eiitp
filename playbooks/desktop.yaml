@@ -9,11 +9,11 @@
 
     cask_packages:
       - adobe-acrobat-reader
+      - brave-browser
       - caffeine
       - discord
       - docker
       - electrum
-      - firefox
       - google-chrome
       - iterm2
       - shiftit
