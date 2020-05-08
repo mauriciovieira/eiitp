@@ -19,6 +19,10 @@
       - "templates/shell/.gitconfig"
 
   tasks:
+    - name: Ensure destinations exist
+      file: path="{{ item.dest }}" state=directory
+      loop: "{{ repositories }}"
+
     - name: Clone repositories
       git: repo="{{ item.repo }}" dest="{{ item.dest }}" version="{{ item.version }}"
       loop: "{{ repositories }}"
