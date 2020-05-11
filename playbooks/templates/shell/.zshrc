@@ -112,7 +112,7 @@ fi
 
 # golang setup
 export GOPATH="$HOME/workspace/Go"
-export PATH="$PATH:$GOPATH/bin"
+export PATH="$HOME/bin:$PATH:$GOPATH/bin"
 
 # Add COMPOSER to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.composer/vendor/bin"
