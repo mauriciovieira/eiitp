@@ -178,3 +178,9 @@ _asdf() {
 
   popd >/dev/null
 }
+
+## Rails
+omnistart_app () {
+  local app_name=$1
+  rails new $app_name --database=postgresql -m https://raw.githubusercontent.com/OmnicodeSolutions/omnistart_rails/master/template.rb
+}
