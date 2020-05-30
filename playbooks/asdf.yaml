@@ -7,6 +7,9 @@
     - name: "markosamuli.asdf"
       asdf_init_shell: false
       asdf_plugins:
+        - name: deno
+          versions:
+            - 1.0.0
         - name: kustomize
           repository: "https://github.com/Banno/asdf-kustomize.git"
           versions:
