@@ -15,6 +15,7 @@
       - docker
       - electrum
       - google-chrome
+      - graphiql
       - iterm2
       - postman
       - shiftit
