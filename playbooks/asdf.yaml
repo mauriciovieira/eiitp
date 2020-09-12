@@ -9,7 +9,7 @@
       asdf_plugins:
         - name: deno
           versions:
-            - 1.0.0
+            - 1.3.3
         - name: kustomize
           repository: "https://github.com/Banno/asdf-kustomize.git"
           versions:
