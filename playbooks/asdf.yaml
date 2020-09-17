@@ -24,6 +24,7 @@
         - name: python
           versions:
             - "3.8.2"
+            - "3.7.9"
         - name: ruby
           versions:
             - "2.5.8"
