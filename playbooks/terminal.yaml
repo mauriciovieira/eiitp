@@ -29,6 +29,7 @@
       - imagemagick
       - jq
       - mosh
+      - mr
       - parity
       - passpie
       - pv
