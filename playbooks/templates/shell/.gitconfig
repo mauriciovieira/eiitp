@@ -3,3 +3,5 @@
 # Please adapt and uncomment the following lines:
 	name = Mauricio Vieira
 	email = mauricio@mauriciovieira.net
+[pull]
+	rebase = false
