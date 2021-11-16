@@ -11,6 +11,7 @@
     screenshots_path: "~/Pictures/Screenshots"
 
     packages:
+      - act
       - ag
       - autojump
       - bats
