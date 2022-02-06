@@ -5,9 +5,6 @@
 
   vars:
     packages:
-      - macvim
-
-    cask_packages:
       - adobe-acrobat-reader
       - brave-browser
       - caffeine
@@ -19,6 +16,7 @@
       - graphiql
       - inkscape
       - iterm2
+      - macvim
       - obs
       - postman
       - rescuetime
@@ -29,10 +27,7 @@
       - visual-studio-code
 
   tasks:
-    - name: Install Homebrew packages
+    - community.general.homebrew:
+      name: Install Homebrew packages
       homebrew: name={{ packages }} state=latest
-
-    - name: Install Homebrew Cask packages
-      homebrew_cask: name={{ item }} state=latest
-      with_items: "{{ cask_packages }}"
 
