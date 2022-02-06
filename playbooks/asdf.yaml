@@ -7,30 +7,13 @@
     - name: "markosamuli.asdf"
       asdf_init_shell: false
       asdf_plugins:
-        - name: deno
-          versions:
-            - 1.8.1
-        - name: kustomize
-          repository: "https://github.com/Banno/asdf-kustomize.git"
-          versions:
-            - "3.5.4"
-        - name: minukube
-          repository: "https://github.com/alvarobp/asdf-minikube.git"
-          versions:
-            - "1.8.2"
         - name: nodejs # bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
           versions:
-            - "14.15.4"
+            - "17.4.0"
         - name: python
           versions:
-            - "3.8.2"
-            - "3.7.9"
+            - "3.10.2"
         - name: ruby
           versions:
-            - "2.6.6"
-            - "2.7.2"
-          global: "2.6.6"
-        - name: skaffold
-          repository: "https://github.com/virtualstaticvoid/asdf-skaffold.git"
-          versions:
-            - "1.5.0"
+            - "3.1.0"
+          global: "3.1.0"
