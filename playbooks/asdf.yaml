@@ -16,4 +16,3 @@
         - name: ruby
           versions:
             - "3.1.0"
-          global: "3.1.0"
