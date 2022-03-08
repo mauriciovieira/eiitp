@@ -13,9 +13,8 @@ Install [Homebrew](http://brew.sh)
 ## Execution
 
 ```
-alias eiitp=make
-eiitp lets
-eiitp go
+alias everybody_is_in_the_place=make
+everybody_is_in_the_place lets go
 ```
 
 ## Inspiration
