@@ -16,3 +16,6 @@
         - name: ruby
           versions:
             - "3.1.0"
+        - name: rust
+          versions:
+            - "1.64.0"

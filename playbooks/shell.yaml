@@ -14,6 +14,7 @@
       - "templates/shell/.zshrc"
       - "templates/shell/.asdfrc"
       - "templates/shell/.tool-versions"
+      - "templates/shell/.default-cargo-crates"
       - "templates/shell/.default-gems"
       - "templates/shell/.default-python-packages"
       - "templates/shell/.gitconfig"
